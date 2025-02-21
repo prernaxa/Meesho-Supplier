@@ -24,7 +24,7 @@ export default function CancelledPage() {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="flex flex-col w-full p-6">
+      <div className="flex flex-col w-full p-6 ml-64">
         <h2 className="text-2xl font-semibold">Orders</h2>
 
         {/* Policy Alert */}

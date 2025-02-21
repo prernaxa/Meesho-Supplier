@@ -9,7 +9,7 @@ export default function PaymentsPage() {
       <Sidebar />
 
     
-      <div className="p-6 space-y-6 flex-1">
+      <div className="p-6 space-y-6 flex-1 ml-64">
         
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-semibold">Payments</h1>

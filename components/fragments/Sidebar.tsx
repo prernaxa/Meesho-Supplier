@@ -12,7 +12,7 @@ export default function Sidebar() {
   const navItemClass = "flex items-center gap-3 p-2 rounded-md transition hover:bg-gray-800";
 
   return (
-    <aside className="w-64 bg-black text-white min-h-screen shadow-lg flex flex-col">
+    <aside className="w-64 bg-black text-white min-h-screen shadow-lg flex flex-col fixed z-50">
       
       {/* Header */}
       <div className="p-4 border-b border-gray-700 flex justify-between items-center">
@@ -39,7 +39,7 @@ export default function Sidebar() {
 
       {/* Navigation */}
       <nav className="p-3 space-y-2">
-        <Link href="/dashboard/home" className={navItemClass}>
+        <Link href="/dashboard/" className={navItemClass}>
           <Home className="w-5 h-5" /> Home
         </Link>
 

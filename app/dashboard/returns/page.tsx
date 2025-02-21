@@ -1,5 +1,6 @@
 "use client";
 
+import Sidebar from "@/components/fragments/Sidebar";
 import React, { useState } from "react";
 
 const tabs = ["Overview", "Return Tracking", "Claim Tracking", "Courier Partner"];
@@ -8,7 +9,9 @@ const ReturnsPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Overview");
 
   return (
-    <div className="p-6 min-h-screen bg-gray-100">
+    <div className="flex">
+      <Sidebar/>
+    <div className="p-6 min-h-screen bg-gray-100 w-full ml-64">
       {/* Header */}
       <h1 className="text-2xl font-bold mb-2">Return/RTO Orders</h1>
 
@@ -27,10 +30,10 @@ const ReturnsPage: React.FC = () => {
       <div className="flex border-b mb-4">
         {tabs.map((tab) => (
           <button
-            key={tab}
-            onClick={() => setActiveTab(tab)}
-            className={`px-6 py-2 text-sm font-medium ${
-              activeTab === tab ? "border-b-2 border-purple-600 text-purple-600" : "text-gray-500"
+          key={tab}
+          onClick={() => setActiveTab(tab)}
+          className={`px-6 py-2 text-sm font-medium ${
+            activeTab === tab ? "border-b-2 border-purple-600 text-purple-600" : "text-gray-500"
             }`}
           >
             {tab}
@@ -58,6 +61,7 @@ const ReturnsPage: React.FC = () => {
         <p className="text-gray-500 text-sm">Please check again later.</p>
       </div>
     </div>
+  </div>
   );
 };
 
